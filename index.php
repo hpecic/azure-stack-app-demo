@@ -1,1 +1,1 @@
-<?php echo $_ENV; ?>
+<?php var_dump($_ENV); ?>
