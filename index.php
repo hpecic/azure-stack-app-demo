@@ -1,1 +1,1 @@
-<?php echo "hello pap"; ?>
+<?php echo $_ENV; ?>
