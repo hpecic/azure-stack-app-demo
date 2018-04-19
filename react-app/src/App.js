@@ -53,25 +53,15 @@ class App extends Component {
             <Infos project={this.state.project} deployment={this.state.deployment} />
           </Box>
         </Columns> */}
-        <Split>
           <Box
             justify='center'
             align='center'
             pad='medium'>
             <Heading margin='medium'>
-              VM is deployed <Status value='ok' />
+              App succesfully deployed from GitHub! <Status value='ok' />
             </Heading>
             <Hero background={image} size='medium'></Hero>
           </Box>
-          <Box
-            align='center'
-            pad='medium'>
-            <Heading margin='medium'>
-              Informations:
-            </Heading>
-            <Infos project={this.state.project} deployment={this.state.deployment} />
-          </Box>
-        </Split>
         {/* <Box pad='medium' align='center' justify='center'>
         </Box> */}
       </GrommetApp>
