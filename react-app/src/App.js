@@ -6,10 +6,9 @@ import Hero from 'grommet/components/Hero';
 import Split from 'grommet/components/Split';
 import Box from 'grommet/components/Box';
 import Image from 'grommet/components/Image';
-import Columns from 'grommet/components/Columns';
 import Status from 'grommet/components/icons/Status';
+import Title from 'grommet/components/Title';
 // import logo from './logo.svg';
-import Infos from './infos';
 import './App.css';
 
 class App extends Component {
@@ -33,6 +32,7 @@ class App extends Component {
 
   render() {
     let image = <Image fit='contain' src='hero.png'></Image>;
+    let logoHPE = <Image fit='contain' src='logohpe.png'></Image>;
 
     return (
       <GrommetApp centered={false}>
@@ -53,15 +53,31 @@ class App extends Component {
             <Infos project={this.state.project} deployment={this.state.deployment} />
           </Box>
         </Columns> */}
+        <Heading margin='medium' align='center'>
+          Welcome to the HPE Azure Stack Innovation Center!
+        </Heading>
+        <Box align='center'>
+          <Title align='center'>
+            Your app is now deployed from GitHub <Status value='ok' /> !
+          </Title>
+        </Box>
+
+        <Split>
           <Box
             justify='center'
             align='center'
             pad='medium'>
-            <Heading margin='medium'>
-              App succesfully deployed from GitHub! <Status value='ok' />
-            </Heading>
+            {/* <Heading margin='medium'>
+              VM is deployed <Status value='ok' />
+            </Heading> */}
             <Hero background={image} size='medium'></Hero>
           </Box>
+          <Box
+            align='center'
+            pad='medium'>
+            <Hero background={logoHPE} size='medium'></Hero>
+          </Box>
+        </Split>
         {/* <Box pad='medium' align='center' justify='center'>
         </Box> */}
       </GrommetApp>
